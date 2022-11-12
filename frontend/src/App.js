@@ -8,16 +8,18 @@ import { Route, Routes } from "react-router-dom";
 import Auth from "./components/Auth";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./store";
+
 function App() {
-  // const dispatch = useDispatch();
+  // const dispath = useDispatch();
 
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
   console.log(isLoggedIn);
   // useEffect(() => {
   //   if (localStorage.getItem("userId")) {
-  //     dispatch(authActions.login());
+  //     dispath(authActions.login());
   //   }
-  // }, [dispatch]);
+  // }, [dispath]);
+
   return (
     <React.Fragment>
       <header>

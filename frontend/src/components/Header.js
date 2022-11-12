@@ -64,7 +64,7 @@ const Header = () => {
             <Button
               onClick={() => dispath(authActions.logout())}
               LinkComponent={Link}
-              to="/auth"
+              to="/"
               variant="contained"
               sx={{ margin: 1, borderRadius: 10 }}
               // color="warning"
