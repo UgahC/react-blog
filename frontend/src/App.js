@@ -30,7 +30,7 @@ function App() {
       <main>
         <Routes>
           {!isLoggedIn ? (
-            <Route path="/auth" element={<Auth />} />
+            <Route path="/" element={<Auth />} />
           ) : (
             <>
               <Route path="/blogs" element={<Blogs />} />

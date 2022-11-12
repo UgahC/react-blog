@@ -62,7 +62,10 @@ const Header = () => {
           )}
           {isLoggedIn && (
             <Button
-              onClick={() => dispath(authActions.logout())}
+              onClick={() => {
+                localStorage.removeItem("userId");
+                dispath(authActions.logout());
+              }}
               LinkComponent={Link}
               to="/"
               variant="contained"
