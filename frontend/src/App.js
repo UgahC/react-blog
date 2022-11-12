@@ -10,15 +10,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./store";
 
 function App() {
-  // const dispath = useDispatch();
+  //
+  const dispath = useDispatch();
 
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
   console.log(isLoggedIn);
-  // useEffect(() => {
-  //   if (localStorage.getItem("userId")) {
-  //     dispath(authActions.login());
-  //   }
-  // }, [dispath]);
+  //
+  useEffect(() => {
+    if (localStorage.getItem("userId")) {
+      dispath(authActions.login());
+    }
+  }, [dispath]);
 
   return (
     <React.Fragment>
