@@ -1,7 +1,7 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 let isLoggedIn = false;
 
-if (localStorage.getItem("userId")) isLoggedIn = localStorage.getItem("userId");
+if (localStorage.getItem("userId")) isLoggedIn = true;
 
 const authSlice = createSlice({
   name: "auth",
