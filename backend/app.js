@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const blogRouter = require("./routes/blog-routes");
 const router = require("./routes/user-routes");
 const cors = require("cors");
+const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
@@ -13,7 +14,7 @@ mongoose
   .connect(
     "mongodb+srv://Vincent:isaac1989@ap.hyolreh.mongodb.net/Ugah?retryWrites=true&w=majority"
   )
-  .then(() => app.listen(5000))
+  .then(() => app.listen(port))
   .then(() =>
     console.log("connected To Database and Listening To Localhost 5000")
   )
